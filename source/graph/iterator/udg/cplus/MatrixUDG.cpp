@@ -71,7 +71,10 @@ MatrixUDG::MatrixUDG()
         cout << "vertex(" << i << "): ";
         mVexs[i] = readChar();
     }
-
+    //邻接矩阵中每一个mMatrix[][]全部初始化为0
+    for (p1= 0; p1 < mVexNum; p1++)
+	for (p2 = 0; p2 < mVexNum; p2++)
+	    mMatrix[p1][p2] = 0;
     // 初始化"边"
     for (i = 0; i < mEdgNum; i++)
     {
@@ -112,7 +115,10 @@ MatrixUDG::MatrixUDG(char vexs[], int vlen, char edges[][2], int elen)
     // 初始化"顶点"
     for (i = 0; i < mVexNum; i++)
         mVexs[i] = vexs[i];
-
+    //邻接矩阵中每一个mMatrix[][]全部初始化为0
+    for (p1 = 0; p1 < mVexNum; p1++)
+	for (p2 = 0; p2 < mVexNum; p2++)
+	    mMatrix[p1][p2] = 0;
     // 初始化"边"
     for (i = 0; i < mEdgNum; i++)
     {
